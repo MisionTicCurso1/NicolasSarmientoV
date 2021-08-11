@@ -8,7 +8,7 @@ M= float(input("Ingrese por favor su masa en KG: "))
 A= float(input("Ingrese su altura por favor en M: "))
 
 #Realizamos el calculo del IMC,agregamos el ** para realizar la exponenciación
-IMC=(M/(A**2))
+IMC=round((M/(A**2)),2)
 
 #Clasificamos la variable IMC según los parametros, usando condicionales
 if IMC <18.5:
@@ -31,3 +31,4 @@ if IMC >=40:
 
 #Mensaje de decoración
 print("Cuida tu salud :)")
+
