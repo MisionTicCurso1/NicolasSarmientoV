@@ -23,11 +23,13 @@ u=a
 if um>=1:
     um*=1000
     cobro+=um*90
-if 1<=c<=5:
-    c= (c*100)+(d*10)+ u
+
+c= (c*100)+(d*10)+ u
+
+#Los numeros de 3 cifras van del 0 hasta el 999
+if 1<=c<=500: #Intervalo de 100 a 500
     cobro+=c*25
-if 5<c<=9:
-    c= (c*100)+(d*10)+ u
+if 500<c<=999: #Intervalo de 500 a 1000
     cobro+=c*50
     
 print("El total a pargar por su consumo es de $",cobro)
