@@ -8,6 +8,7 @@ if a>100:
     cobro=100*10
 else:
     cobro=a*10
+    a=0 # a=0 para que no cobre doble
 
 #Descomponemos el valor en unidades m, centenas, decenas y unidades
 um = a//1000
