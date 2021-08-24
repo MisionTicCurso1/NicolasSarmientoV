@@ -1,6 +1,16 @@
 #Ejercicio para intercambiar palabras
+import random
 
-listaFrutas=['manzana','pera', 'durazno','mango','fresa','kiwi','banano','mandarina']
+
+Frutas=['manzana','pera', 'durazno','mango','fresa','pomarrosa',
+'durazno','melon','guayaba','sandia','limon','uva','maracuyá','curuba','tamarindo',
+'frambuesa','toronja','albaricoque','membrillo','dátil','carambola','cereza']
+
+listaFrutas=[]
+
+for i in range(0,6):
+    listaFrutas.append(random.choice(Frutas))
+
 
 print(listaFrutas)
 p1= input("Elija una fruta para intercambiarla \n")
