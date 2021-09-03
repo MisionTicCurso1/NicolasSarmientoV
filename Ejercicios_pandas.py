@@ -71,3 +71,10 @@ print(DT4.head())
 
 print('\n5 ultimas filas del data frame')
 print(DT4.tail())
+
+print("------Ejercicio 5-----")
+print('\n Informacion Dataframe 1: ')
+print(DT3.info())
+
+print('\n Informacion Dataframe 2: ')
+print(DT4.info())
