@@ -1,0 +1,223 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(39, 39, 39);
+
+}
+
+.banner{
+    background: rgb(0, 0, 0);
+    color: rgba(255, 255, 255, 0);
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.banner h1{
+    font-size: 72px;
+    font-weight: bold;
+    background:url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperboat.com%2Fwp-content%2Fuploads%2F2019%2F04%2Frick-and-morty-wallpaper-portal-wallpaper-001.jpg&f=1&nofb=1);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.controls{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+    justify-content:space-around;
+    align-items: center;
+}
+.buttons{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 40px;
+    height:70px ;
+    border-radius: 20px;
+    width: 30%;
+    border: none;
+}
+.buttons:hover{
+    background-color: black;
+    color: chartreuse;
+    border: 1px solid chartreuse;
+}
+
+.message{
+    width: 100%;
+    height: 65vh;
+    margin-top: 30px;
+    background-color: rgba(0, 0, 0, 0.349);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+        
+}
+
+.loader{
+    
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 10px solid transparent;
+    border-top: 10px solid chartreuse;
+    border-left:10px solid chartreuse ;
+    transform: rotateZ(40deg);
+    animation: spin 0.7s linear infinite;
+    display: none;
+
+}
+@keyframes spin {
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+
+
+#bgcontainer{
+    margin: 20px 0px;
+    display: none;
+    
+}
+.content{
+    width: 100%;
+    margin: 30px 0px;
+    padding: 20px 0px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(20%, 300px));
+    gap: 30px;
+    justify-content: center;
+}
+
+.object{
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 360px;
+    border-radius: 5%;
+    border: 2px solid chartreuse;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    position: relative;
+    transform-style:preserve-3d ;
+    transition: .7s ease;
+   
+}
+.front, .back{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex: auto;
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+   
+
+}
+
+.back{
+    color: white;
+    transform: rotateY(180deg);
+}
+.nomb{
+    border-top: 2px solid white;
+}
+.back h2{
+    display: flex;
+    flex:auto;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+
+.contenedor:hover .object{
+    transform: rotateY(180deg);
+
+}
+
+.front img{
+    padding: 10px;
+    width: 95%;
+    border-radius: 20px;
+}
+.front h2{
+    color: white;
+    width: 98%;
+    display: flex;
+    flex: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-top: 2px solid rgb(255, 255, 255);
+}
+
+@media (max-width: 760px) {
+    .buttons{
+        font-size: 30px;
+        width: 40%;
+    }
+}
+
+@media (max-width: 640px) {
+    .banner h1{
+        display: flex;
+        align-items: center;
+        font-size: 40px;
+    }
+    .buttons{
+        font-size: 20px;
+    }
+    .content{
+        grid-template-columns:  minmax(20%, 300px);
+    }
+}
+
+@media (max-width: 340px){
+    .banner h1{
+        font-size: 30px;
+    }
+    
+}
+
+@media (min-height: 1350px){
+    .message{
+        height: 80vh;
+    }
+}
+@media (max-height: 780px){
+    .message{
+        height: 65vh;
+    }
+}
+
+@media (max-height: 700px){
+    .message{
+        height: 62vh;
+    }
+}
+
+@media (max-height: 670px){
+    .message{
+        height: 60vh;
+    }
+}
+
+@media (max-height: 660px){
+    .message{
+        height: 58vh;
+    }
+}
