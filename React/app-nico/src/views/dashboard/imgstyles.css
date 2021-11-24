@@ -1,0 +1,19 @@
+.img{
+    width: 150px;
+}
+
+.Container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    gap: 20px;
+}
+.card{
+    background-color: rgb(175, 175, 182);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 250px ;
+}

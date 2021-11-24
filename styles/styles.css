@@ -114,7 +114,7 @@ body{
     position: relative;
     transform-style:preserve-3d ;
     transition: .7s ease;
-   
+    -moz-backface-visibility: hidden;
 }
 .front, .back{
     position: absolute;
@@ -127,6 +127,8 @@ body{
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    
    
 
 }
@@ -134,7 +136,9 @@ body{
 .back{
     color: white;
     transform: rotateY(180deg);
+    
 }
+
 .nomb{
     border-top: 2px solid white;
 }
@@ -151,7 +155,6 @@ body{
 
 .contenedor:hover .object{
     transform: rotateY(180deg);
-
 }
 
 .front img{

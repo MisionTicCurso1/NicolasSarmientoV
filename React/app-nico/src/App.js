@@ -1,24 +1,21 @@
-import logo from './logo.svg';
+import {Router} from "@reach/router";
 import './App.css';
 
-function App() {
+import Register from "./views/register/Register";
+import DashBoard from "./views/dashboard/Dashboard";
+import VistaLikes from "./views/Ejercicio2/Vista2"
+import ViewEjercicio3 from "./views/ViewEjercicio3";
+import EjercicioVistas from "./views/EjercicioVistas/VistasEj3"
+
+function App(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <Router>
+     <Register path="/"/>
+     <DashBoard path="/dashboard"/>
+     <VistaLikes path='/Ejercicio2'/>
+     <ViewEjercicio3 path='/Ejercicio3'/>
+     <EjercicioVistas path='/Ejercicio-Peliculas'/>
+   </Router>
   );
 }
 
