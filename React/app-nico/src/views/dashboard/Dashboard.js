@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{Fragment} from 'react'
 import {Link} from "@reach/router"
 import Lista from "../../content/Lista"
 import Imagen from "../../Assets/img1.jpg"
@@ -23,6 +23,7 @@ export default function DashBoard() {
                 <Lista datos={dato}/>
                 ))}
             </div>
+            
         </div>
     )
 }
